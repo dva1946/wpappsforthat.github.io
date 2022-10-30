@@ -158,16 +158,40 @@ tr:nth-child(even) {background-color: #f2f2f2;}
  /* A Fancy Table (Only need this: <table id="customers"> */
  /*********************************************************/
  
- #customers {
+ #customers td { /* removed th, as made td a class below */
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
 
+/* 10-29-22 made into two styles
 #customers td, #customers th {
   border: 1px solid #ddd;
   padding: 8px;
 }
+*/
+
+/* Don't need a separate td, as in customer above 
+.wpapps-td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+*/
+
+.wpapps-th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-weight: bold;
+}
+
+/*
+.pods-th {
+	background-color: #01B292;
+	border: 1px solid;
+	font-weight: bold;
+	padding: 4px 4px 4px 4px;
+}
+*/
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
 
@@ -176,7 +200,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #04AA6D;
   color: white;
 }
