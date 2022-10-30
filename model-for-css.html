@@ -29,6 +29,34 @@
           background-color: #04AA6D;
           color: white;
         }
+        /* Floating column for labels: 25% width */
+        .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+
+        }
+        .col-25b {
+        float: left;
+        width: 25%;
+        font-weight: 900;
+        margin-top: 6px;
+
+        }
+        /* Floating column for inputs: 50% width */
+        .col-50 {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+
+        }
+
+        /* Floating column for inputs: 75% width */
+        .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+        }
     </style>
 <title>Github Web Pages - Dave Van Abel</title>
     <head>
@@ -38,34 +66,50 @@
         <div style="overflow-x:auto;">
             <table id="customers">
                 <tr>
-                    <th>Task</th>
-                    <th>Description</th>
+                    <div class="col-25">
+                        <th >Task</th>
+                    </div>
+                    <div class="col-75">
+                        <th>Description</th>
+                    </div>
                 </tr>
                 <tr>
-                    <td  >
+                    <div class="col-25">
+                        <td  >
                         A Table
-                    </td>
-                    <td  >
+                        </td>
+                    </div>
+                    <div class="col-75">
+                        <td  >
                         LOL, but I can not see any nice styling!
-                    </td>
+                        </td>
+                    </div>
                 </tr>
                 <tr>
-                    <td  >
+                    <div class="col-25">
+                        <td  >
                         If
-                    </td>
-                    <td  >
+                        </td>
+                    </div>
+                    <div class="col-75">
+                        <td  >
                         If the App had run as a script it would have dynamically displayed two values. 
-                    </td>
+                        </td>
+                    </div>
                 </tr>   
                 <tr>
-                    <td >
+                    <div class="col-25">
+                        <td >
                         If
-                    </td>
-                    <td >
+                        </td>
+                    </div>
+                    <div class="col-75">
+                        <td >
                         Again, if the App had run as a script, the header displays script name and today's date, which
                         demonstrates dynamic data. This will be covered in 
                         this documentation. Dynamic data enhances your website.
-                    </td>
+                        </td>
+                    </div>
                 </tr>
             </table>
         </div>
