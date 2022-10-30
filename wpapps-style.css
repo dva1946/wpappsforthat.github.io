@@ -198,3 +198,36 @@ div.uploadfile-app {
   text-align: center;
   color: red;
 }
+
+/* 10-29-22 Taken from style-addon-myappsforthat.css */
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+
+}
+.col-25b {
+  float: left;
+  width: 25%;
+  font-weight: 900;
+  margin-top: 6px;
+
+}
+/* Floating column for inputs: 50% width */
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* END */
