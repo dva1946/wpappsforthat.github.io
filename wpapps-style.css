@@ -4,9 +4,9 @@
  * Author: Dave Van Abel
  * Author URI: https://wpappsforthat.com/
  * Description: WpAppsForThat.com custom stylesheet intended to be used in his own Apps.
- * Created: 2022-07-02 12:005:00
- * Updated: 2022-07-03 12:55:00
- * Version: 1.0.001
+ * Created: 2022-07-02 12:00:00
+ * Updated: 2022-10-30 17:00:00
+ * Version: 1.1.000
 */
 
 /* 07-02-22 DVA preparing to 1) Rename & 2) Make it a stylesheet that loads only once 
@@ -27,12 +27,12 @@
     */
 
 /* An ID Selector  (DEMO, BUT USEFUL. Maybe rename later! */
-
+/*
   #para1 {
     text-align: center;
     color: red;
   }
-
+*/
 /* A CLASS Selector - VERY USEFUL & CAN ENHANCE */
 
   /*
@@ -140,7 +140,7 @@ a:hover, a:active {
 }
 
  /* A SIMPLE & RESPONSIVE TABLE Selector - req's <div above & below table */
- 
+/* 
  table {
   border-collapse: collapse;
   width: 100%;
