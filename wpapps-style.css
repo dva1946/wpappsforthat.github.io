@@ -158,30 +158,16 @@ tr:nth-child(even) {background-color: #f2f2f2;}
  /* A Fancy Table (Only need this: <table id="customers"> */
  /*********************************************************/
  
- #customers td th { /* removed th, as made td a class below */
+ #customers { /* removed th, as made td a class below */
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  padding: 8px;
   width: 100%;
 }
-#customers th {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: center;
-  background-color: #04AA6D;
-  color: white;
-}
 
-/*
-.pods-th {
-	background-color: #01B292;
-	border: 1px solid;
-	font-weight: bold;
-	padding: 4px 4px 4px 4px;
+ #customers td, #customers th { /* removed th, as made td a class below */
+  border-collapse: collapse;
+  padding: 8px;
 }
-*/
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
 
