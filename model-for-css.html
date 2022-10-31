@@ -2,6 +2,17 @@
 <!-- Trying to get CSS to work (anywhere) -->
 <html lang="en">
 <head>
+    <!-- 10-30-22 Model summary:
+        STILL UNABLE TO USE STYLING FILE - IT SUCKS!
+        Used many models from W3Schools & generally noted in here.
+        I like the style="width:25%" on 1st row and no more.
+        Might need to expand it a bit.
+        Did need these two for table control, etc:
+            <div style="overflow-x:auto;">
+            <table id="customers">
+        Happy now that I can build a few pages and will put Donna and Dave photo on the 
+        main page in a para
+    -->
     <!-- 10-30-22 LINK does not appear to work, so reverting back to style w/in each html file
          (did not work either) An alternative is change the link to use "" around the url -->
     <!-- <link rel=”stylesheet” type=”text/css” href="https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css" /> -->
@@ -94,6 +105,15 @@
             border:3px solid black;
             border-collapse: collapse;
         }
+        /* Float for an image 10-30-22 
+        https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_float
+        */
+        img-lt {
+        float: left;
+        }
+        img-rt {
+        float: left;
+        }
     </style>
 <title>Github Web Pages - Dave Van Abel</title>
     <head>
@@ -102,8 +122,6 @@
     <body>
         <div style="overflow-x:auto;">
             <table id="customers">
-            <!-- <table style="width:100%"> -->
-                    <!-- <div class="row"> -->
                    <!-- HEADER ROW -->
                     <tr>                       
                         <th style="width:25%">Task</th>
