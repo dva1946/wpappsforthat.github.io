@@ -5,12 +5,21 @@
  * Author URI: https://wpappsforthat.com/
  * Description: WpAppsForThat.com custom stylesheet intended to be used in his own Apps.
  * Created: 2022-07-02 12:00:00
- * Updated: 2022-10-30 17:00:00
- * Version: 1.1.000
+ * Updated: 2022-10-31 17:11:00
+ * Version: 1.2.000
 */
 
-/* 07-02-22 DVA preparing to 1) Rename & 2) Make it a stylesheet that loads only once 
-  and can be called by any php file.
+/* 10-31-22 Got this styplesheet to work on Github Pages
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Github Web Pages - Dave Van Abel</title>
+        <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' /> -->
+    <head>
+        <h2>Modelling CSS for Github Pages</h2> 
+    </head>
+    <body>
+    10-31-22: Secret to working is SINGLE QUOTES
   This is new for us and follows this/these document pages: 
     https://webdesign.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
     https://www.w3schools.com/css/
@@ -167,11 +176,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   border: 2px solid #ddd;
   padding: 8px;
 }
-
 #customers tr:nth-child(even){background-color: #f2f2f2;}
-
 #customers tr:hover {background-color: #ddd;}
-
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -183,13 +189,9 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 /* Float for an image 10-30-22 
 https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_float
 */
-img-lt {
+img {
   float: left;
 }
-img-rt {
-  float: left;
-}
-
 /* EX usage: 
 <p>
 <img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
@@ -208,7 +210,7 @@ div.uploadfile-app {
  /* END: A Fancy Table (Only need this: <table id="customers"> */
  /**************************************************************/
 
-/* ACustom CLASS for an error message, used in my-file-upload-1.php */
+/* A Custom CLASS for an error message, used in my-file-upload-1.php */
 
 #div.err-uploadfile-app {
   text-align: center;
@@ -217,7 +219,7 @@ div.uploadfile-app {
 
 /* 10-29-22 Taken from style-addon-myappsforthat.css */
 
-/* Floating column for labels: 25% width */
+/* 10-31-22: Floating column for labels: 25% width */
 .col-25 {
   float: left;
   width: 25%;
@@ -245,5 +247,68 @@ div.uploadfile-app {
   width: 75%;
   margin-top: 6px;
 }
+
+/* 10-31-22 Adding in what was developed on Github Web Pages
+and some of it may be missing
+*/
+
+/* 10-31-22 Merging in from model-for-css-v2-stylesheet.html 
+
+    /* Table Row Styling: */
+      /* 10-30-22 from -> https://www.w3schools.com/css/tryit.asp?filename=trycss_float_boxes */
+      {
+        box-sizing: border-box;
+      }
+  
+      /* Create two unequal columns that floats next to each other */
+      .column {
+          float: left;
+          padding: 10px;
+          height: 300px; /* Should be removed. Only for demonstration */
+      }
+  
+      .left {
+          width: 25%;
+      }
+  
+      .right {
+          width: 75%;
+      }
+  
+      /* Clear floats after the columns */
+      .row:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+      */
+  
+      /* Bring in simplified Table / row / column stypling
+          https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_column_width
+          Set widths:
+              <table style="width:100%">
+              <th style="width:50%">Firstname</th>  
+                  Set 1st column and others adjust from there.
+                  Might be real simple solution(s)     
+      */
+      table, th, td {
+          border:3px solid black;
+          border-collapse: collapse;
+      }
+      /* Float for an image 10-30-22 (last new css b/f fixing styling on Github Pages */
+        /* https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_float */
+      */
+      img {
+        float: left;
+      }
+      /* could be right or inherit - study and test, test, test! */
+      /* left, right, none, inh
+        left - The element floats to the left of its container
+        right - The element floats to the right of its container
+        none - The element does not float (will be displayed just where it occurs in the text). This is default
+        inherit - The element inherits the float value of its parent
+        In its simplest use, the float property can be used to wrap text around images.
+      */
+  
 
 /* END */
