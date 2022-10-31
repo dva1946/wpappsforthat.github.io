@@ -85,6 +85,18 @@
         }
         */
 
+    /* Bring in simplified Table / row / column stypling
+        https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_column_width
+        Set widths:
+            <table style="width:100%">
+            <th style="width:50%">Firstname</th>  
+                Set 1st column and others adjust from there.
+                Might be real simple solution(s)     
+    */
+    table, th, td {
+        border:1px solid black;
+        border-collapse: collapse;
+    }
     </style>
 <title>Github Web Pages - Dave Van Abel</title>
     <head>
@@ -92,47 +104,33 @@
     </head>
     <body>
         <div style="overflow-x:auto;">
-            <table id="customers">
-                <!-- <div class="row"> -->
+            <!-- <table id="customers"> -->
+            <table style="width:100%">
+                    <!-- <div class="row"> -->
                    <!-- HEADER ROW -->
-                    <tr>
-                        <div class="col-25">
-                            <th>Task</th>
-                        </div>
-                        <div class="col-75">
-                            <th>Description</th>
-                        </div>
+                    <tr>                       
+                        <th style="width:25%"></th>>Task</th>
+                        <th>Description</th>
                     </tr>
                     <!-- BODY R0WS (duplicate as needed)-->
                     <tr>
-                        <div class="col-25">
-                            <td>A Table</td>
-                        </div>
-                        <div class="col-75">
-                            <td >LOL, but I can not see any nice styling!</td>
-                        </div>
+                        <td>A Table</td>
+                        <td >LOL, but I can not see any nice styling!</td>>
                     </tr>
                     <tr>
-                        <div class="col-25">
-                            <td>If</td>
-                        </div>
-                        <div class="col-75">
-                            <td>
-                                If the App had run as a script it would have dynamically displayed two values.
-                            </td>
-                        </div>
+                        
+                        <td>If</td>
+                        <td>
+                            If the App had run as a script it would have dynamically displayed two values.
+                        </td>
                     </tr>   
-                    <tr>
-                        <div class="col-25">
-                            <td>If</td>
-                        </div>
-                        <div class="col-75">
-                            <td >
+                    <tr>                        
+                        <td>If</td>
+                        <td >
                             Again, if the App had run as a script, the header displays script name and today's date, which
                             demonstrates dynamic data. This will be covered in 
                             this documentation. Dynamic data enhances your website.
-                            </td>
-                        </div>
+                        </td>>
                     </tr>
                 <!-- </div> -->
             </table>
