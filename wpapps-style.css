@@ -133,43 +133,62 @@
 
 /* FONTS - I am leaving out for now as I have a mixed site: FSE & Apps */
 
- /* LINK(S) - Initial findings w/tweaks seem fine */
+ /* LINK(S) - 10-31-22 -> https://www.w3schools.com/css/css_link.asp */
 
- a:link, a:visited {
-  background-color: lightskyblue;
-  color: white;
-  padding: 14px 25px;
+/* commented out for new set for above on W3Cschools */
+/*
+  a:link, a:visited {
+    background-color: lightskyblue;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:hover, a:active {
+    background-color: #e64c4c;
+
+  }
+*/
+
+/* 10-31-22 Link Boxes W3C site above */
+a:link, a:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
 }
 
 a:hover, a:active {
-  background-color: lightgoldenrodyellow;
+  background-color: green;
+  color: white;
 }
+/* 10-31-22 END OF W3C */
 
- /* A SIMPLE & RESPONSIVE TABLE Selector - req's <div above & below table */
-/* 
- table {
-  border-collapse: collapse;
-  width: 100%;
-}
+/* A SIMPLE & RESPONSIVE TABLE Selector - req's <div above & below table */
+  /* 
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-}
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
- */
- 
- /*********************************************************/
- /* A Fancy Table (Only need this: <table id="customers"> */
- /*********************************************************/
- 
+/* 
+  A Fancy Table (Only need this: <table id="customers">
+  There is an alternate for simple styling = table, th, td {
+*/ 
  #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
+
   width: 100%;
 }
  #customers td, #customers th {
