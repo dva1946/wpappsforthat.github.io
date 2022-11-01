@@ -162,7 +162,7 @@ a:link, a:visited {
   /* border: 2px solid green; */
   padding: 10px 20px;
   text-align: center;
-  text-decoration: none;
+  text-decoration: underline; /* none; */
   display: inline-block;
 }
 
