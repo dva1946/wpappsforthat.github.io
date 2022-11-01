@@ -138,7 +138,7 @@
 /* commented out for new set for above on W3Cschools */
 /*
   a:link, a:visited {
-    background-color: lightskyblue;
+    background-color: white;
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -153,7 +153,7 @@
 
 /* 10-31-22 Link Boxes W3C site above */
 a:link, a:visited {
-  background-color: #95c7ed;  /* white changed */
+  background-color: #95c7ed;  /* changed white */
   color: black;
   border: 2px solid green;
   padding: 10px 20px;
