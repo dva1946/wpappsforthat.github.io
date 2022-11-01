@@ -153,7 +153,7 @@
 
 /* 10-31-22 Link Boxes W3C site above */
 a:link, a:visited {
-  background-color: white;
+  background-color: #95c7ed;  /* white changed */
   color: black;
   border: 2px solid green;
   padding: 10px 20px;
