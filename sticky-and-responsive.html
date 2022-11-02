@@ -166,7 +166,7 @@ body {
           <a href="my-file-upload">My File Upload</a> 
           <a href="paypal-ipn">Paypal IPN</a>
           <a href="bio-of-dave">Dave's Bio</a>
-          <a href="topnav-menu-menu">TopNav + Responsive</a>
+          <a href="topnav-menu-responsive">TopNav + Responsive</a>
           <a href="sticky-header">Only Sticky Header</a>
           <a href="sticky-and-Responsive">TopNav + Sticky Responsive</a>
           
@@ -208,13 +208,16 @@ body {
   
 <!-- end from topnav-menu-responsive.html    -->
 
+<!-- Script from sticky-header.html (rename function)-->
+
 <script>
-  window.onscroll = function() {myStickyFunction()};
+  window.onscroll = function() {myFunction()};
   
-  var header = document.getElementById("myHeader");
+  //11-02-22 var header = document.getElementById("myHeader");
+  var header = document.getElementById("myTopnav");
   var sticky = header.offsetTop;
   
-  function myStickyFunction() {
+  function myFunction() {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
     } else {
@@ -222,9 +225,6 @@ body {
     }
   }
   </script>
-  
-
-<!-- Script from sticky-header.html (rename function)-->
 
 <!-- END Script from sticky-header.html (rename function)-->
 
