@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
   margin: 0;
@@ -139,15 +140,14 @@ body {
   }
 }
 
-
 /* END OF TOPNAV + RESPONSIVE */
 </style>
 </head>
 <body>
 <!-- 11-01-22 Create a sticky header -> https://www.w3schools.com/howto/howto_js_sticky_header.asp -->
 <div class="top-container">
-</p><img src="OnLakeMichigan-2022.jpg" 
-alt="On Lake Michigan May 2022" style="width:1048px;height:250px;">
+    </p><img src="OnLakeMichigan-2022.jpg" 
+        alt="On Lake Michigan May 2022" style="width:1048px;height:250px;">
 </div>
 <!-- ADD from topnav-menu-responsive.html -->
 
@@ -206,6 +206,26 @@ alt="On Lake Michigan May 2022" style="width:1048px;height:250px;">
     </script>
   
 <!-- end from topnav-menu-responsive.html    -->
+
+<script>
+  window.onscroll = function() {myStickyFunction()};
+  
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myStickyFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
+  
+
+<!-- Script from sticky-header.html (rename function)-->
+
+<!-- END Script from sticky-header.html (rename function)-->
 
 </body>
 </html>
