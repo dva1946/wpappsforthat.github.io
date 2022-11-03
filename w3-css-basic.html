@@ -1,258 +1,80 @@
 <!DOCTYPE html>
 <html>
-<head>
+<title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.top-container {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-}
-
-.header {
-  padding: 10px 16px;
-  background: rgb(187, 236, 61);
-  color: #f1f1f1;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 102px;
-}
-
-/*Adding TopNav & Responsive from topnav-menu-responsive.html */
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 17px;    
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
-  color: white;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
-/* END OF TOPNAV + RESPONSIVE */
-</style>
-</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- 
+    Use the W3 link initially so I can see what is happening.
+    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' />
+<link rel="stylesheet" href="https://dva1946.github.io/wpappsforthat.github.io/w3.css">  
+-->
 <body>
-<!-- 11-01-22 Create a sticky header -> https://www.w3schools.com/howto/howto_js_sticky_header.asp -->
-  
-  <div class="top-container">
-      <img src="OnLakeMichigan-2022.jpg" 
-          alt="On Lake Michigan May 2022" style="width:480px;height:147px">
-  </div>
 
-<!-- ADD from topnav-menu-responsive.html -->
+<header class="w3-container w3-red">
+  <h1>Header</h1>
+</header>
 
-    <!-- Navigation Bar -->
-    <div class="topnav" id="myTopnav">
-      <a href="index" class="active">Home</a>
-      <a href="https://github.com/dva1946" target="_blank"><strong>My Github</strong></a>
-      <a href="bio-of-dave">My Bio</a>
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="basic-101">Basic 101</a>
-          <a href="join-simulator">Join Simulator</a>
-          <a href="my-file-upload">My File Upload</a> 
-          <a href="paypal-ipn">Paypal IPN</a>
-          <a href="bio-of-dave">Dave's Bio</a>
-          <a href="sticky-and-responsive">TopNav + Sticky Responsive</a>
-          
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">W3-CSS 
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="w3-css-basic">W3 Css Basics</a>
-          <a href="join-simulator">Join Simulator</a>
-          <a href="my-file-upload">My File Upload</a> 
-          <a href="paypal-ipn">Paypal IPN</a>
-          <a href="bio-of-dave">Dave's Bio</a>
-          <a href="sticky-and-responsive">TopNav + Sticky Responsive</a>
-          
-        </div>
-      </div> 
+<img src="img_car.jpg" alt="Nice car" style="width:100%">
 
-      <a href="https://wpappsforthat.com" target="_blank">WpAppsForThat</a>
-      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+<div class="w3-container">
+  <p>A car is a wheeled, self-powered motor vehicle used for transportation.
+  Most definitions of the term specify that cars are designed to run primarily on roads,
+  to have seating for one to eight people, to typically have four wheels. (Wikipedia).</p>    
 
-
-<!-- END  from topnav-menu-responsive.html -->
-
-<div class="content">
-  <h3>Features Sticky, Pulldowns and Responsive</h3>
-  <p>Just like the fancy themes in Wordpress, except this is all written in html, css and javascript.</p>
-  
-  <p>My next job is to consolidate CSS and create an INCLUDE. Then every page can have this menu,
-    until them I have to buid them one-by-one.</p>
-  <p>Content below is to enable full page scrolling. So I am adding some photos for fun. <strong>Wilson St and S 9th St</strong> in Manitowoc, WI is where we live now. Laughing a bit, this home was built about 1955, so it is no great upgrade 
-    from the 1951 version in Hollandtown. I have to say that is false and true, considering the condition when we got it February 1st, 2021.
-<img src="WilsonStOnTheLake.jpg" 
-alt="Wilson and 9th by the lake" style="width:225px;height:300px;margin-right:10px;"> All this is true: 
-All exterion doors & storm had to be replaced, it had not been maintained for 25-30 years, all stormwindows needed refurbishing, trees needed to come down 
-and now the furnace + ducting is being replaced. Oh ya, I put in three windows to replace a 4' x 8' window set that could not stop any cold or hot weather. 
-Aside from the basement didn't leak and most appliances worked, it was like our home in Hollandtown.
-
-<p><strong>Home in Hollandtown</strong> This were the Van Abel family grew up (most of us). Our Dad, etc build this home around 1951 on 6 acres of
-  land that our dad (we think) got it from the Van Abel Family. Folklure has it the Van Abel families (we don't know them all) owned most of 
-  Hollandtown land from somewhere in the 1800's. I wrote this above, but moving it to here. After Dad and Don died in 1963, our mom finally re-married 
-  in 1971 and sold the place for $15,000.<img src="OurHomeInHollandTown.jpg" 
-alt="The Old Homestead" style="width:300px;height:225px;margin-right:10px;">
-<p>
-
+  <table class="w3-table w3-bordered w3-striped">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>Adam</td>
+        <td>Johnson</td>
+        <td>67</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-half">
+    <div class="w3-card">
+      <img src="img_london.jpg" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="w3-half">
+    <div class="w3-card">
+      <img src="img_london.jpg" alt="London" style="width:100%">
+      <div class="w3-container">
+        <p>London is the capital city of England.</p>
+        <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Script from topnav-menu-responsive.html -->
-
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    </script>
-  
-<!-- end from topnav-menu-responsive.html    -->
-
-<!-- Script from sticky-header.html (rename function)-->
-
-<script>
-  window.onscroll = function() {myFunction()};
-  
-  //11-02-22 var header = document.getElementById("myHeader");
-  var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-  var sticky = header.offsetTop;
-  
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-  </script>
-
-<!-- END Script from sticky-header.html (rename function)-->
+<footer class="w3-container w3-red w3-margin-top">
+  <h5>Footer</h5>
+  <p>Footer information goes here</p>
+</footer>
 
 </body>
 </html>
