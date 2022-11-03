@@ -5,8 +5,8 @@
     <title>Github Web Pages - Dave Van Abel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' />
-
+    /* <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' /> */
+  
     <!-- 11-02-22 ADDING MENUS, ETC -->
     <style>
       body {
@@ -14,6 +14,32 @@
         font-family: Arial, Helvetica, sans-serif;
       }
       
+/* From wpapps-style.css, so it can be eliminated during testing */
+/*  A Fancy Table (Only need this: <table id="customers">
+    There is an alternate for simple styling = table, th, td {
+*/ 
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+
+      width: 100%;
+    }
+    #customers td, #customers th {
+      border: 2px solid #ddd;
+      padding: 8px;
+    }
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    #customers tr:hover {background-color: #ddd;}
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: #04AA6D;
+      color: white;
+    }
+
+/* *********** */
+
       .top-container {
         background-color: #f1f1f1;
         padding: 30px;
