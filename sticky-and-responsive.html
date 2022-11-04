@@ -183,7 +183,10 @@ body {
   </div> 
 
   <a href="https://wpappsforthat.com" target="_blank">WpAppsForThat</a>
+  // 11-03-22: Had to rename to myrFunction and above due to duplicate use other script 
+  //<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myrFunction()">&#9776;</a>
+
 </div>
 
 <!-- END NAVIGATION BAR -->
@@ -218,6 +221,8 @@ alt="The Old Homestead" style="width:300px;height:225px;margin-right:10px;">
 <!-- Script from topnav-menu-responsive.html -->
       <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
     <script>
+      /* 11-03-22: Had to rename to myrFunction and above in menu area */
+      /* function myrFunction() { */
       function myrFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
