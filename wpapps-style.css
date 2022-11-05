@@ -8,6 +8,7 @@
  * Updated: 2022-10-31 17:11:00
  * Version: 1.2.000
 */
+/* 11-05-22: commented <img css as it may affect header image */
 
 /* 10-31-22 Got this styplesheet to work on Github Pages
 <!DOCTYPE html>
@@ -212,9 +213,12 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 /* Float for an image 10-30-22 
 https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_float
 */
+/* 11-05-22 comment out as it may affect any image which can be the header
+
 img {
   float: left;
 }
+*/
 /* EX usage: 
 <p>
 <img src="pineapple.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;">
