@@ -23,7 +23,7 @@
   This is new for us and follows this/these document pages: 
     https://webdesign.tutsplus.com/tutorials/loading-css-into-wordpress-the-right-way--cms-20402
     https://www.w3schools.com/css/
-    */
+*/
 
 /* TEST CSS from www.w3schools.com/css/ */
 
@@ -317,12 +317,6 @@ and some of it may be missing
       table, th, td {
           border:3px solid black;
           border-collapse: collapse;
-      }
-      /* Float for an image 10-30-22 (last new css b/f fixing styling on Github Pages */
-        /* https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_float */
-      */
-      img {
-        float: left;
       }
       /* could be right or inherit - study and test, test, test! */
       /* left, right, none, inh
