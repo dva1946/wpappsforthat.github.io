@@ -9,7 +9,12 @@
  * Version: 1.2.000
 */
 /* 11-05-22: commented <img css as it may affect header image */
-
+/* 11-05-22: Set of rules I need to understand and implement
+    READ, UNDERSTAND & IMPLEMENT
+    Read: https://www.w3schools.com/css/tryit.asp?filename=trycss_link
+    Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.
+    Note: a:active MUST come after a:hover in the CSS definition in order to be effective.
+*/              
 /* 10-31-22 Got this styplesheet to work on Github Pages
 <!DOCTYPE html>
 <html lang="en">
@@ -159,8 +164,11 @@
 */ 
 a:link, a:visited {
   /* 11-05-22 trying to get a background to work
-  background-color: white; /* #95c7ed;   */
-  background-color: #95c7ed;
+              this fixed visited for now
+  */
+  
+  /* background-color: white; */
+  background-color: #95c7ed;  /* 11-05-22 this fixed visited for now
   color: black;
   /* border: 2px solid green; */
   padding: 10px 20px;
