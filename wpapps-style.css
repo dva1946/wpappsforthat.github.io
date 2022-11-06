@@ -158,7 +158,9 @@
   https://www.w3schools.com/css/css_link.asp
 */ 
 a:link, a:visited {
+  /* 11-05-22 trying to get a background to work
   background-color: white; /* #95c7ed;   */
+  background-color: #95c7ed;
   color: black;
   /* border: 2px solid green; */
   padding: 10px 20px;
@@ -379,7 +381,10 @@ body {
 /* 11-05-22 REVISED per below in two places (must still test) */
 /*          https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
 /*          Only edited ones shown in link  */
-
+/*          REVIEWED: Visited is still white, but sticky-responsive-orig.html 
+                      doesn't use a visited.
+                      I need to find a VISITED link
+*/
 .topnav {
   overflow: hidden;
   background-color: #333;
