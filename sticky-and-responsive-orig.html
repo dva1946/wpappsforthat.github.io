@@ -97,6 +97,30 @@ body {
   text-align: left;
 }
 
+/* 11-05-22: Adding per this page: https://www.w3schools.com/css/tryit.asp?filename=trycss_link
+  [x] a:link = NONE
+  [x] a:visited = NONE
+  a:hover = line 100, 105
+  a:active = NONE
+
+
+*/
+/* unvisited link */
+a:link {
+  color: red;
+}
+/* visited link */
+a:visited {
+  color: green;
+}
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* NOTE: not sure if I can do this, as a:hover in two below .topnav & .dropdown-content
+/* 11-05-22 END OF NEW STYLING CODE */
+
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
@@ -109,6 +133,11 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
 
 @media screen and (max-width: 600px) {
