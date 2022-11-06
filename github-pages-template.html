@@ -1,0 +1,136 @@
+
+  <!-- START: HEADER & MENU with STICKY / RESPONSIVE -->
+  <!-- 11-01-22 Create a sticky header -> https://www.w3schools.com/howto/howto_js_sticky_header.asp -->
+    
+  <!-- HEADER IMAGE -->
+  <!-- this works, try for image now -->
+  
+  <!-- 11-05-22 FIXED: Removed This one has an issue with styling -->
+  <div class="top-container">
+    <!-- <img src="OnLakeMichigan-2022.jpg" alt="On Lake Michigan May 2022" style="width:480px;height:147px"> -->
+    <!-- Trying to again get full size -->
+    <!-- <img src="OnLakeMichigan-2022.jpg" alt="On Lake Michigan May 2022" style="width:819px;height:250px">  -->
+    <img src="OnLakeMichigan-2022.jpg" alt="On Lake Michigan May 2022" style="width:1048px;height:250px">
+    
+  </div>
+
+  <!-- NAVIGATION BAR -->
+
+  <div class="topnav" id="myTopnav">
+    <!-- Top Menu Item(s) -->
+    <a href="index" class="active">Home</a>
+
+    <!-- Site Pages -->  
+    <div class="dropdown">
+      <button class="dropbtn">Site Pages 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="basic-101">Basic 101</a>
+        <a href="join-simulator">Join Simulator</a>
+        <a href="my-file-upload">My File Upload</a> 
+        <a href="paypal-ipn">Paypal IPN</a>
+        <a href="bio-of-dave">Dave's Bio</a>
+        
+      </div>
+    </div>
+
+    <!-- Menus -->
+      <div class="dropdown">
+      <button class="dropbtn">Menus Types
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="topnav-menu-responsive">TopNav + Responsive</a>
+        <a href="sticky-and-responsive">TopNav + Sticky + Responsive (CSS File)</a>
+        <a href="sticky-and-responsive-orig">TopNav + Sticky + Responsive (ORIG)</a>
+      </div>
+    </div> 
+    <!-- My Github -->
+    <div class="dropdown">
+      <button class="dropbtn">My Github 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="https://github.com/dva1946" target="_blank"><strong>My Github Home</strong></a>      
+        <a href="https://github.com/dva1946/paypal-ipn" target="_blank"><strong>IPN App</strong></a>      
+        <a href="https://github.com/dva1946/docs/tree/main/paypal-ipn" target="_blank"><strong>IPN Docs</strong></a>      
+        <a href="https://github.com/dva1946/my-file-upload" target="_blank"><strong>My File Upload</strong></a>      
+      </div>
+    </div> 
+    <!-- Top Menu Item(s) -->
+    <a href="https://github.com/dva1946" target="_blank"><strong>WpAppsForThat</strong></a>
+
+    <!-- 11-03-22: Had to rename myFunction to myrFunction (2 places) due to 
+    duplicate function name in other script bottom of html.
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    -->
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myrFunction()">&#9776;</a>
+
+  </div>
+
+</div>
+<!-- *************************************************** -->
+<!-- END OF HEADER & MENU SYSTEM - NO EDIT ALLOWED BELOW -->
+<!-- *************************************************** -->
+
+<!-- *************************** -->
+<!--  BEGINNING OF PAGE CONTENT  -->
+<!-- *************************** -->
+
+<div class="content">
+  <h3>WEB EDITOR ZONE</h3>
+  <p>Just like the fancy themes in Wordpress, except this is all written in html, css and javascript.</p>
+
+</div>
+
+<!-- ********************************************** -->
+<!-- END OF WEB EDITOR ZONE - NO EDIT ALLOWED BELOW -->
+<!-- ********************************************** -->
+
+
+<!-- ******************************** -->
+<!-- BEGIN OF SCRIPTS FOR MENU SYSTEM --> 
+<!-- ******************************** -->
+<!-- Script from topnav-menu-responsive.html -->
+      <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+    <script>
+      /* 11-03-22: Had to rename to myrFunction and above in menu area */
+      /* function myrFunction() { */
+      function myrFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+  
+<!-- end from topnav-menu-responsive.html    -->
+
+<!-- Script from sticky-header.html (rename function)-->
+
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  //11-02-22 var header = document.getElementById("myHeader");
+  var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+  </script>
+
+<!-- END Script from sticky-header.html (rename function)-->
+<!-- ******************************** -->
+<!-- END OF SCRIPTS FOR MENU SYSTEM --> 
+<!-- ******************************** -->
+
+</body>
+</html>
