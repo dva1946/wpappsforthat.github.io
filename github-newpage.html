@@ -37,11 +37,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
 </head>  
 <body>
-<!-- MOVE TWO SCRIPTS FROM github-pages-template-2.html UP HERE -->
 
-<!-- ********************************************************************* -->
-<!-- START: github-pages-template-2.html: BEGIN OF SCRIPTS FOR MENU SYSTEM -->
-<!-- ********************************************************************* -->
+<!-- *************************************************** -->
+<!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- *************************************************** -->
 
 <!-- Script from topnav-menu-responsive.html -->
       <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
@@ -60,14 +59,9 @@
     
   <!-- end from topnav-menu-responsive.html    -->
   
-  <!-- Script from sticky-header.html (rename function)-->
-  
+  <!-- Script from sticky-header.html -->
   <script>
     window.onscroll = function() {myFunction()};
-    
-    //11-02-22 var header = document.getElementById("myHeader");
-    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-    var sticky = header.offsetTop;
     
     function myFunction() {
       if (window.pageYOffset > sticky) {
@@ -76,14 +70,19 @@
         header.classList.remove("sticky");
       }
     }
+    //11-02-22 moved these two line from above the function because of global error condition 
+    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+    var sticky = header.offsetTop;
+
     </script>
   
-  <!-- END Script from sticky-header.html (rename function) -->
+<!-- ************************************************* -->
+<!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- ************************************************* -->
 
 <!-- THIS INCLUDES THE CONTENT OF THE TEMPLATE FILE BELOW, WHICH MAKE SIT DYNAMIC -->
-<div w3-include-html="github-pages-template-1.html"></div>   <!-- github-pages-template-1.html-->
-<div w3-include-html="index-content.html"></div>   <!-- Editable index page -->
-<!-- <div w3-include-html="github-pages-template-2.html"></div> --> <!-- github-pages-template-2.html-->
+<div w3-include-html="github-header-template.html"></div>   <!-- github-header-menu-template.html-->
+<div w3-include-html="github-index-content.html"></div>   <!-- Editable index page -->
 
 <script>
 includeHTML();
