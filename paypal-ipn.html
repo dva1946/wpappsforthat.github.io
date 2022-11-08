@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel=”stylesheet” type=”text/css” href=”style.css”>
-    <link rel=”stylesheet” type=”text/css” href=”wpapps-style.css”>
-    <title>Github Web Pages - Dave Van Abel</title>
-  </head>
-
-
-  <body>
-    <h1>Dave Van Abel - IPN Apps</h1>
-    
-    <h2>
-    New - Oct 27th, 2022
-    </h2>
-<!-- wp:paragraph {"align":"left","fontSize":"medium"} -->
-<p class="has-text-align-left has-medium-font-size"><strong>IPN AppsForThat</strong> is functional, tested locally, via <a href="https://developer.paypal.com" target="blank" title="See PayPal developer subdomain on PayPal.Com">PayPal IPN Simulator</a> and now production ready. The App was used live Oct 25th, 2022 at <a href="https://www.wwgvr.org" target="_blank" rel="noopener" title="WoodWorks Of Green Valley Recreation">WoodWorkers Of Green Valley Recreation</a>.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size"><strong>A new production only release</strong> is currently in the works:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list {"fontSize":"medium"} -->
-<ul class="has-medium-font-size"><li>It is only intended for PayPal Sandbox and Live use.</li><li>It will not include any local web page interface.</li><li>The goal is:<ul><li>Download from Github</li><li>Configure (Sandbox or Live)</li><li>Upload to your website server</li><li>Test and and go live environment</li></ul></li></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p><strong>Now What?</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list {"fontSize":"medium"} -->
-<ul class="has-medium-font-size"><li><strong>Initial Release</strong>:<ul><li>Test model has Local and Sandbox Simulator testing.</li><li>Can also configure for Production use, but is a bit complex.</li><li>Still needs better documentation.</li><li>Does include MySQL interface.</li></ul><ul><li>Not dependent on any plugins.</li><li>Does require knowledge in Wordpress, PHP and MySQL.</li></ul></li><li><strong>Future Releases</strong> <strong>- More database interfaces</strong>:<ul><li>WP Users.</li><li>Custom Member Payment App with its own MySQL table.</li></ul><ul><li>Basic reports.</li><li>Management tools (lots of work so no promises)</li></ul></li><li><strong>PayPal IPN App Objectives</strong>:<ul><li>A solid base PayPal IPN App without adding plugins!</li><li>Expandable by the user community.</li><li>Contributions to the project from the user community. </li></ul></li><li><strong>A Closing Comment</strong>:<ul><li>My primary objective is <span style="text-decoration: underline;">teach people how to fish!</span></li></ul></li></ul>
-<!-- /wp:list -->
-
-<p>
-  <a href="/wpappsforthat.github.io/index">Home</a>  
-  <a href="/wpappsforthat.github.io/basic-101">Basic 101</a>  
-  <a href="/wpappsforthat.github.io/join-simulator">Join Simulator</a>  
-  <a href="/wpappsforthat.github.io/paypal-ipn">Paypal IPN</a>  
-  <a href="/wpappsforthat.github.io/bio-of-dave">Dave's Bio</a> 
-  <a href="/wpappsforthat.github.io/topnav-menu">See TopNav Menu</a>
+<!-- 11-06-22: IMPORT HEADER: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2 -->
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+</script>
   
-</p></body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>  
+<body>
+
+<!-- *************************************************** -->
+<!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- *************************************************** -->
+
+<!-- Script from topnav-menu-responsive.html -->
+      <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+      <script>
+        /* 11-03-22: Had to rename to myrFunction and above in menu area */
+        /* function myrFunction() { */
+        function myrFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+    
+  <!-- end from topnav-menu-responsive.html    -->
+  
+  <!-- Script from sticky-header.html -->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    //11-02-22 moved these two line from above the function because of global error condition 
+    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+    var sticky = header.offsetTop;
+
+    </script>
+  
+<!-- ************************************************* -->
+<!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- ************************************************* --> 
+
+<!-- THIS INCLUDES THE CONTENT OF THE TEMPLATE FILE BELOW, WHICH MAKE SIT DYNAMIC -->
+<div w3-include-html="github-header-template.html"></div> 
+<div w3-include-html="github-paypal-ipn-content.html"></div>
+<script>
+includeHTML();
+</script>
+
+</body>
 </html>

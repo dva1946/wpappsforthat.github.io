@@ -1,115 +1,47 @@
 <!DOCTYPE html>
-<!-- 11-04-22: Added new menu system & wpapps-style.css -->
-<html> 
-  <head>
+<html>
+<!-- 11-06-22: IMPORT HEADER: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2 -->
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+</script>
+  
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>  
 <body>
-  <!-- START: HEADER & MENU with STICKY / RESPONSIVE -->
-  <!-- 11-01-22 Create a sticky header -> https://www.w3schools.com/howto/howto_js_sticky_header.asp -->
-    
-  <div class="top-container">
-      <img src="OnLakeMichigan-2022.jpg" 
-          alt="On Lake Michigan May 2022" style="width:480px;height:147px">
-  </div>
 
-<!-- NAVIGATION BAR -->
+<!-- *************************************************** -->
+<!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- *************************************************** -->
 
-<div class="topnav" id="myTopnav">
-  <!-- Top Menu Item(s) -->
-  <a href="index" class="active">Home</a>
-
-  <!-- Site Pages -->  
-  <div class="dropdown">
-    <button class="dropbtn">Site Pages 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="basic-101">Basic 101</a>
-      <a href="join-simulator">Join Simulator</a>
-      <a href="my-file-upload">My File Upload</a> 
-      <a href="paypal-ipn">Paypal IPN</a>
-      <a href="bio-of-dave">Dave's Bio</a>
-      
-    </div>
-  </div>
-
-  <!-- Menus -->
-    <div class="dropdown">
-    <button class="dropbtn">Menus Types
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="topnav-menu-responsive">TopNav + Responsive</a>
-      <a href="sticky-and-responsive">TopNav + Sticky + Responsive</a>
-      <a href="sticky-and-responsive-orig">TopNav + Sticky + Responsive ORIG</a>
-    </div>
-  </div> 
-  <!-- My Github -->
-  <div class="dropdown">
-    <button class="dropbtn">My Github 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="https://github.com/dva1946" target="_blank"><strong>My Github Home</strong></a>      
-      <a href="https://github.com/dva1946/paypal-ipn" target="_blank"><strong>IPN App</strong></a>      
-      <a href="https://github.com/dva1946/docs/tree/main/paypal-ipn" target="_blank"><strong>IPN Docs</strong></a>      
-      <a href="https://github.com/dva1946/my-file-upload" target="_blank"><strong>My File Upload</strong></a>      
-    </div>
-  </div> 
-  <!-- Top Menu Item(s) -->
-  <a href="https://github.com/dva1946" target="_blank"><strong>WpAppsForThat</strong></a>
-
-  <!-- 11-03-22: Had to rename myFunction to myrFunction (2 places) due to 
-  duplicate function name in other script bottom of html.
-      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-  -->
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myrFunction()">&#9776;</a>
-</div>
-
-<!-- END: HEADER & MENU with STICKY / RESPONSIVE -->
-<p>Above Bio Table - should send menu to correct area (maybe).</p>
-  <div style="overflow-x:auto;">
-      <table id="customers">
-             <!-- HEADER ROW -->
-              <tr>                       
-                  <th>Bio of Dave Van Abel</th>
-              </tr>
-              <!-- BODY R0WS (duplicate as needed)-->
-              <tr>
-              <!-- <a href="www.uwplatt.edu"><strong target="_blank">A Civil Engineer by education</strong></a> -->
-                  <td ><a href="https://www.uwplatt.edu" target="_blank"><strong>Civil Engineer 1972 - UW Platteville</strong></a> who wondered into Applications Development in the mid 1980s, and worked there until retirement in 2013. However, I still dabble in front-end WordPress app development.
-                  </td>
-              </tr>
-              <tr>
-                <td ><strong>Data processing</strong> was my favorite type of application development, specifically telephone billing in the 80’s and early 90s. The last big project was data processing design-develop in a successful $31M Class-Action Law suit case (settled around 2010-2011).
-                </td>
-              </tr>
-              <tr>
-                <td ><strong>Around 2000</strong> I entered web development using Perl and open source databases. My work also included a software team in Romania. Somewhere after 2010 I discovered WordPress, while working in the Corporate world.
-                </td>
-              </tr>
-              <tr>
-                <td ><strong>In 2015 and 2016</strong> I created two club websites in WordPress. However. after many frustration years with plugins, it became obvious the best solution was Learn Now To Write Front-End Apps for WordPress. Mission tackled and accomplished in 2019 and 2020. Now it is time to pass on this knowledge.
-                </td>
-              </tr>
-              <tr>
-                <td ><strong>If you are inspired</strong> and have some required skills, it is probably time for you to dip your toes in the water. Apps which you can download from this site and some of my HowTos should get you started and eventually successful! Most of all HAVE FUN!
-                </td>
-              </tr>
-              <tr>
-                <td ><strong>PS</strong>: Fall 2022 now writing WpApps again mainly for one client and teaching people how to fish via Github.Com.
-                </td>
-              </tr>
-              <!-- </div> -->
-      </table>
-  </div>
-
-  <!-- ******************************** -->
-<!-- BEGIN OF SCRIPTS FOR MENU SYSTEM --> 
-<!-- ******************************** -->
 <!-- Script from topnav-menu-responsive.html -->
       <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
       <script>
@@ -127,14 +59,9 @@
     
   <!-- end from topnav-menu-responsive.html    -->
   
-  <!-- Script from sticky-header.html (rename function)-->
-  
+  <!-- Script from sticky-header.html -->
   <script>
     window.onscroll = function() {myFunction()};
-    
-    //11-02-22 var header = document.getElementById("myHeader");
-    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-    var sticky = header.offsetTop;
     
     function myFunction() {
       if (window.pageYOffset > sticky) {
@@ -143,11 +70,23 @@
         header.classList.remove("sticky");
       }
     }
+    //11-02-22 moved these two line from above the function because of global error condition 
+    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+    var sticky = header.offsetTop;
+
     </script>
   
-  <!-- END Script from sticky-header.html (rename function)-->
-  <!-- ******************************** -->
-  <!-- END OF SCRIPTS FOR MENU SYSTEM --> 
-  <!-- ******************************** -->
-  </body>
+<!-- ************************************************* -->
+<!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- ************************************************* --> 
+
+<!-- THIS INCLUDES THE CONTENT OF THE TEMPLATE FILE BELOW, WHICH MAKE SIT DYNAMIC -->
+<div w3-include-html="github-header-template.html"></div> 
+<div w3-include-html="github-bio-of-dave-content.html"></div>
+
+<script>
+includeHTML();
+</script>
+
+</body>
 </html>
