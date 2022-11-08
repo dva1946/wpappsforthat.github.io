@@ -1,73 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Github Web Pages - Dave Van Abel</title>
-    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' />
-
-  <body> 
-    <div style="overflow-x:auto;">
-      <table id="customers">
-          <tr>
-              <th>A Registration and Menu Mgmt App</th>
-          </tr>
-          <tr>
-            <td>
-              <a href="https://wpappsforthat.com/index.php/registration-join-simulator-slideshow/" target="_blank" rel="noreferrer">WpAppsForThat.com - Registration Join Simulator Slideshow</a>
-            </td>
-          </tr>
-          <tr>
-              <td>
-                <a href="https://github.com/dva1946/Join-Simulator/" target="_blank">My repository for source code</a>
-              </td>
-          </tr>
-          <tr>
-            <td >
-              So my contribution to teaching is within the Apps
-            </td>
-          </tr>
-          <tr>
-            <td >
-              PHP code is written in as PROCEDURAL, not OOP (Object Orientated) because it is simpler and 
-              very good for sharing. Most Apps have ample comments.
-            </td>
-          </tr>
-          <tr>
-            <td >
-              Apps will be released in order of complexity (with a few exceptions), so people can advance their
-              skills progressively.
-            </td>
-          </tr>
-          <tr>
-            <td >
-              This is a the basic PHP script with a bit of HTML. I am not here to teach 101 Anything like:
-              PHP, MySQL, HTML or CSS. However included some styling. Separate file(s) for CSS will be included, 
-              and some Custom CSS that can (likely) can be included in your theme.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              While learning how to build Apps, seldom did I find complete Apps. I will try to provide complete Apps,
-              which includes database table definitions complete with loadable schemas in SQL format, so you can import
-              to your Wordpress database.
-            </td>
-          </tr>
-          <tr>
-            <td >
-              Hopefully what I have and am providing will get you started.
-            </td>
-          </tr>
-      </table>
-      </div>
+<!-- 11-06-22: IMPORT HEADER: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2 -->
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+</script>
   
-    <p>
-      <a href="/wpappsforthat.github.io/index"><b>Home</b></a> 
-      <a href="/wpappsforthat.github.io/basic-101"><b>Basic 101</b></a> 
-      <a href="/wpappsforthat.github.io/join-simulator"><b>Join Simulator</b></a> 
-      <a href="/wpappsforthat.github.io/paypal-ipn"><b>Paypal IPN</b></a> 
-      <a href="/wpappsforthat.github.io/bio-of-dave"><b>Dave's Bio</b></a> 
-      <a href="/wpappsforthat.github.io/topnav-menu">See TopNav Menu</a>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>  
+<body>
 
-</p>
+<!-- *************************************************** -->
+<!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- *************************************************** -->
+
+<!-- Script from topnav-menu-responsive.html -->
+      <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+      <script>
+        /* 11-03-22: Had to rename to myrFunction and above in menu area */
+        /* function myrFunction() { */
+        function myrFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+    
+  <!-- end from topnav-menu-responsive.html    -->
+  
+  <!-- Script from sticky-header.html -->
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    //11-02-22 moved these two line from above the function because of global error condition 
+    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+    var sticky = header.offsetTop;
+
+    </script>
+  
+<!-- ************************************************* -->
+<!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+<!-- ************************************************* --> 
+
+<!-- THIS INCLUDES THE CONTENT OF THE TEMPLATE FILE BELOW, WHICH MAKE SIT DYNAMIC -->
+<div w3-include-html="github-header-template.html"></div> 
+<div w3-include-html="github-join-simulator-content.html"></div>
+
+<script>
+includeHTML();
+</script>
 
 </body>
 </html>
