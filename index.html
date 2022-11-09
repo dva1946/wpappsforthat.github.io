@@ -140,9 +140,7 @@
             window.onscroll = function() {myFunction()};
             //11-02-22 moved these two line from above the function because of global error condition 
             var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-            // 11-09-22 replacing below line per above
-            //var sticky = header.offsetTop;
-            var sticky = navbar.offsetTop;
+            var sticky = header.offsetTop;
             
             function myFunction() {
               if (window.pageYOffset > sticky) {
