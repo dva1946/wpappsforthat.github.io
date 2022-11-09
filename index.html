@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head> 
 <!-- 11-06-22: IMPORT HEADER: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_html_include_2 -->
 <script>
   function includeHTML() {
@@ -30,56 +35,12 @@
     }
   };
 </script>
-  
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' type='text/css' href='https://dva1946.github.io/wpappsforthat.github.io/wpapps-style.css' >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
-</head>  
+ 
 <body>
 
-<!-- *************************************************** -->
-<!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
-<!-- *************************************************** -->
-
-<!-- Script from topnav-menu-responsive.html -->
-      <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
-      <script>
-        /* 11-03-22: Had to rename to myrFunction and above in menu area */
-        /* function myrFunction() { */
-        function myrFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-      </script>
-    
-  <!-- end from topnav-menu-responsive.html    -->
-  
-  <!-- Script from sticky-header.html -->
-  <script>
-    window.onscroll = function() {myFunction()};
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-    //11-02-22 moved these two line from above the function because of global error condition 
-    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-    //var sticky = header.offsetTop;
-
-    </script>
-  
-<!-- ************************************************* -->
-<!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
-<!-- ************************************************* -->
-
+<!-- 11-08-22: Moving two JS scripts to github-header-template.html file,
+     test to elminate sticky error.
+-->
 <!-- THIS INCLUDES THE CONTENT OF THE TEMPLATE FILE BELOW, WHICH MAKE SIT DYNAMIC -->
 <div w3-include-html="github-header-template.html"></div>   <!-- github-header-menu-template.html-->
 <div w3-include-html="github-index-content.html"></div>   <!-- Editable index page -->
