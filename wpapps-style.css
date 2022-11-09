@@ -8,6 +8,10 @@
  * Updated: 2022-10-31 17:11:00
  * Version: 1.2.000
 */
+/* 11-08-22 Enabling right and center for github pages use */
+/* 11-06-22 seem to have good enough values now. */
+/*  I will have to review these values more */
+/*  and have to look at in-line links (w3s will have it */
 /* 11-05-22: commented <img css as it may affect header image */
 /* 11-05-22: Set of rules I need to understand and implement
     READ, UNDERSTAND & IMPLEMENT
@@ -50,12 +54,17 @@
 */
 /* A CLASS Selector - VERY USEFUL & CAN ENHANCE */
 
-  /*
+/* 11-08-22 Enabling right and center for github pages use */
+
   .center {
     text-align: center;
-    color: red;
+    /* color: red; */
   }
-  */
+  .right {
+    text-align: right;
+    /* color: red; */
+  }
+  
 
 /* An ELEMENT & CLASS Selector (DEMO ONLY) */
 
@@ -226,12 +235,8 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_layout_float
 /* 11-05-22 comment out as it may affect any image which can be the header
 /* This conflicts with responsive or other header images, so it has to be removed */
 
-/* 
-img {
-  float: left;
-}
-*/
-/* END OF COMMENT OUT 11-05-22 */
+/* img {float: left;} */
+/* 11-05-22 END OF COMMENT OUT */
 
 /* EX usage: 
 <p>
@@ -387,11 +392,11 @@ body {
 
 /*Adding TopNav & Responsive from topnav-menu-responsive.html */
 /* 11-05-22 REVISED per below in two places (must still test) */
-/*          https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
-/*          Only edited ones shown in link  */
-/*          REVIEWED: Visited is still white, but sticky-responsive-orig.html 
-                      doesn't use a visited.
-                      I need to find a VISITED link
+/*  https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar */
+/*  Only edited ones shown in link  */
+/*  REVIEWED: Visited is still white, but sticky-responsive-orig.html 
+    doesn't use a visited.
+    I need to find a VISITED link
 */
 .topnav {
   overflow: hidden;
