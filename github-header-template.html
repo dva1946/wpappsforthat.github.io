@@ -65,8 +65,9 @@
 
 </div>
 
-// 11-08-22 Moving to JS files from index.html to here,
-//          to test error conditions.
+<!-- 11-08-22 Moving to JS files from index.html to here,
+          to test error conditions.
+-->
 
 <!-- *************************************************** -->
 <!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
@@ -92,6 +93,9 @@
   <!-- Script from sticky-header.html -->
   <script>
     window.onscroll = function() {myFunction()};
+    //11-02-22 moved these two line from above the function because of global error condition 
+    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+    var sticky = header.offsetTop;
     
     function myFunction() {
       if (window.pageYOffset > sticky) {
@@ -100,11 +104,7 @@
         header.classList.remove("sticky");
       }
     }
-    //11-02-22 moved these two line from above the function because of global error condition 
-    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-    var sticky = header.offsetTop;
-
-    </script>
+  </script>
   
 <!-- ************************************************* -->
 <!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
