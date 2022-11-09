@@ -38,8 +38,10 @@
  
 <body>
 
-<!--11-08-22: ADD ENTIRE github-header-template.html
-            here. then include just content page
+<!--11-08-22: ADD ENTIRE github-header-template-1.html here. 
+              Then include just content page page here.
+              Problem now: No place to edit the header.
+                           So now need to re-study the solution.
 -->
 <!-- *********************************** -->
 <!-- START: github-pages-template-1.html -->
@@ -106,62 +108,63 @@
 
   </div>
 
-
-
 <!-- 11-08-22 Moving to JS files from index.html to here,
               to test error conditions.
 -->
 
-<!-- *************************************************** -->
-<!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
-<!-- *************************************************** -->
+        <!-- *************************************************** -->
+        <!-- BEGIN: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+        <!-- *************************************************** -->
 
-<!-- Script from topnav-menu-responsive.html -->
-      <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
-      <script>
-        /* 11-03-22: Had to rename to myrFunction and above in menu area */
-        /* function myrFunction() { */
-        function myrFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-      </script>
-    
-  <!-- end from topnav-menu-responsive.html    -->
-  
-  <!-- Script from sticky-header.html -->
-  <script>
-    window.onscroll = function() {myFunction()};
-    //11-02-22 moved these two line from above the function because of global error condition 
-    var header = document.getElementById("myTopnav"); //revised from ("myHeader")
-    var sticky = header.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-  </script>
-  
-<!-- ************************************************* -->
-<!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
-<!-- ************************************************* -->
+        <!-- Script from topnav-menu-responsive.html -->
+              <!-- URL Sample Code https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav -->
+              <script>
+                /* 11-03-22: Had to rename to myrFunction and above in menu area */
+                /* function myrFunction() { */
+                function myrFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+              </script>
+            
+          <!-- end from topnav-menu-responsive.html    -->
+          
+          <!-- 11-09-22 I think my scrollinq JS is wrong by one line -->
+          <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_sticky -->
+          <!-- Script from sticky-header.html -->
+          <script>
+            window.onscroll = function() {myFunction()};
+            //11-02-22 moved these two line from above the function because of global error condition 
+            var header = document.getElementById("myTopnav"); //revised from ("myHeader")
+            // 11-09-22 replacing below line per above
+            //var sticky = header.offsetTop;
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+          </script>
+          
+        <!-- ************************************************* -->
+        <!-- END: TWO NAV / MENU SCRIPTS FOR NAV & MENU SYSTEM -->
+        <!-- ************************************************* -->
 
-<!-- ********************************* -->
-<!-- END: github-pages-template-1.html -->
-<!-- ********************************* -->
+        <!-- ********************************* -->
+        <!-- END: github-pages-template-1.html -->
+        <!-- ********************************* -->
 
-
-
-
+<!--  ****************************************** -->
 <!--  END OF INCLUDE github-header-template.html -->
 <!--  ****************************************** -->
+
 <!-- 11-08-22: Moving two JS scripts to github-header-template.html file,
      test to elminate sticky error.
 -->
