@@ -178,8 +178,9 @@ a:link, a:visited {
   
   /* background-color: white; */
   /*background-color: #95c7ed;   11-10-22 set to transparent so links only underlined */
-  background-color: transparent;
-  color: black;
+  background-color: transparent;  /* 11-10-22 -> I really like this situation
+  /* color: black; */ 
+  color: blue;
   /* border: 2px solid green; */
   /* 11-10-22  One value sets LT, RT, TOP,BOTT */
   padding: 5px;
