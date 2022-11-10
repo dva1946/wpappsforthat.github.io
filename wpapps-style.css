@@ -539,29 +539,6 @@ img.aligncenter {
 .aligncenter {
    display: block; margin-left: auto; margin-right: auto; 
   }
-/* 11-10-22 Simple inline link */
-a {
-  color: blue;
-}
-/* unvisited link */
-a:link {
-  color: red;
-}
 
-/* visited link */
-a:visited {
-  color: green;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
-}
-/* *** */
 /* END */
 /* *** */
