@@ -542,3 +542,10 @@ img.aligncenter {
 
 /* END */
 /* *** */
+/* 11-10-22 rethinking and removing all until further researh
+Can from https://www.w3schools.com/css/css_link.asp
+a:link {color: red;}
+a:visited {color: green;}
+a:hover {color: hotpink;}
+a:active {color: blue;}
+*/
