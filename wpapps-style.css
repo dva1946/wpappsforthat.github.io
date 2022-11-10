@@ -390,7 +390,7 @@ body {
 }
 
 .sticky + .content {
-  padding-top: 102px;
+  padding-top: 60px;  /* 11-10-22 corrected from value 102 */
 }
 
 /*Adding TopNav & Responsive from topnav-menu-responsive.html */
