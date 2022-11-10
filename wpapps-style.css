@@ -173,11 +173,11 @@
 */ 
 a:link, a:visited {
   /* 11-05-22 trying to get a background to work
-              this fixed visited for now
+     this fixed visited for now
   */
   
   /* background-color: white; */
-  background-color: #95c7ed;  /* 11-05-22 this fixed visited for now
+  background-color: #95c7ed;  /* 11-05-22 this fixed visited for now */
   color: black;
   /* border: 2px solid green; */
   padding: 10px 20px;
