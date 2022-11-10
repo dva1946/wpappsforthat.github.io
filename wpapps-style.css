@@ -509,6 +509,36 @@ body {
 
 /* 11-04-22 Adding CSS from  sticky-and-responsive.html */
 
+/* 11-09-22 Align images in content https://codex.wordpress.org/Wrapping_Text_Around_Images 
+            Wrapping Text Around Images
+
+
+The image will be embedded into your blog post with the selected style for alignment such as:
+    <img src="http://example.com/images/leaf.jpg" 
+    alt="leaf graphic" 
+    title="leaf graphic" 
+    class="alignright size-medium wp-image-3109" 
+    height="25" width="30"/>
+*/
+
+img.alignright { 
+  float: right; margin: 0 0 1em 1em; 
+}
+img.alignleft { 
+  float: left; margin: 0 1em 1em 0; 
+}
+img.aligncenter {
+   display: block; margin-left: auto; margin-right: auto; 
+  }
+.alignright {
+   float: right; 
+  }
+.alignleft {
+   float: left; 
+  }
+.aligncenter {
+   display: block; margin-left: auto; margin-right: auto; 
+  }
 /* *** */
 /* END */
 /* *** */
