@@ -180,9 +180,8 @@ a:link, a:visited {
   background-color: #95c7ed;  /* 11-05-22 this fixed visited for now */
   color: black;
   /* border: 2px solid green; */
-  /* 11-10-22 remove to rid of undesired affect
-  padding: 10px 20px;
-  */
+  /* 11-10-22  One value sets LT, RT, TOP,BOTT */
+  padding: 5px;
   text-align: center;
   text-decoration: underline; /* none; */
   display: inline-block;
