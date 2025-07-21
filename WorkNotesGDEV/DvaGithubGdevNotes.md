@@ -24,7 +24,7 @@ Main Menu -> Learning MyShopper:
     MyShopper Database: Pages built & time to write content
 
     Next Add More Pages like:
-        Child Theme + css + functions.php
-        Custom Apps (aka templates, but that is confusing)
-        Template pages
+        Child Theme: + css + functions.php
+        Custom Apps: (aka templates, but that is confusing)
+        Template Pages: 
 
