@@ -27,5 +27,4 @@ Main Menu -> Learning MyShopper:
         Child Theme + css + functions.php
         Custom Apps (aka templates, but that is confusing)
         Template pages
-        Custom Apps
 
