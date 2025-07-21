@@ -18,4 +18,14 @@ PROBLEMS ALL SOLVED FOR GITHUB & LOCAL REPOSITORIES!
 
 ** GENERAL REPOSITORY NOTES BELOW **
 
+Main Menu -> Learning MyShopper:
+    MyShopper Intro: Pages built & time to write content
+    MyShopper Requirements: Pages built & time to write content
+    MyShopper Database: Pages built & time to write content
+
+    Next Add More Pages like:
+        Child Theme + css + functions.php
+        Custom Apps (aka templates, but that is confusing)
+        Template pages
+        Custom Apps
 
