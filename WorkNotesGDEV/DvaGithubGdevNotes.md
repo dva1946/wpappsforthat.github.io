@@ -1,6 +1,7 @@
 Filename = DvaGithubGdevNotes.md
-Repository = dva1946/MyShopper-GDEV
-Created = 07-20-25 (this page created date)
+Website = https://dva1946.github.io/wpappsforthat.github.io
+Repository = dva1946/wpappsforthat.github.io
+Created = 07-20-25 (created date)
 
 ** CRITICAL NOTE ******************************************
     Must edit myshopper-newpage.html
