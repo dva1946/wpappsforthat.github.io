@@ -7,7 +7,9 @@ Created = 07-20-25 (this page created date)
     (duplicated from NOW NAMED PAGE github-myshopper-newpage.html)
     to change URL of the last line to reflect:
     <div w3-include-html="github-my-file-upload-content.html"></div>
+    
     THIS IS EXTREMELY COMPLEX-LOOKING & EXTREMELY IMPORTANT
+    BTW: github-index-content.html has an ADDED TABLE below main body.
 ***********************************************************
      
 ABOUT LOCAL & GITHUB REPOSITORIES:
