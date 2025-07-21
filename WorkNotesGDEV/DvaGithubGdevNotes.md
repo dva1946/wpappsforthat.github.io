@@ -2,6 +2,14 @@ Filename = DvaGithubGdevNotes.md
 Repository = dva1946/MyShopper-GDEV
 Created = 07-20-25 (this page created date)
 
+** CRITICAL NOTE ******************************************
+    Must edit myshopper-newpage.html
+    (duplicated from NOW NAMED PAGE github-myshopper-newpage.html)
+    to change URL of the last line to reflect:
+    <div w3-include-html="github-my-file-upload-content.html"></div>
+    THIS IS EXTREMELY COMPLEX-LOOKING & EXTREMELY IMPORTANT
+***********************************************************
+     
 ABOUT LOCAL & GITHUB REPOSITORIES:
     1) Create repository on GitHub
     2) Open up terminal on MinMac
