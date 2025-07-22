@@ -1,3 +1,5 @@
+previous-files/
+templates/
 *.txt
 *.bak
 *.log
