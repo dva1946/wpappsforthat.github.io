@@ -72,9 +72,7 @@
     window.onscroll = function() {myFunction()};
     
     function myFunction() {
-      //07-23-25 thing "Y" in below line is an error
-      //if (window.pageYOffset > sticky) {
-      if (window.pageOffset > sticky) {
+      if (window.pageYOffset > sticky) {
         header.classList.add("sticky");
       } else {
         header.classList.remove("sticky");
